@@ -1,0 +1,33 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev --tunnel-url=https://3743-2409-40d7-106c-960d-ec16-427e-d190-6851.ngrok-free.app:3000",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:studio": "prisma studio",
+    "update-toml": "node ./web/updateToml.js",
+    "predev": "npm run update-toml",
+    "prebuild": "npm run update-toml"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "@shopify/app": "^3.0.0",
+    "@shopify/cli": "^3.0.0",
+    "@shopify/cli-kit": "^3.73.1",
+    "@shopify/shopify-api": "^11.7.0",
+    "cryptr": "^6.3.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@iarna/toml": "^2.2.5",
+    "prisma": "^6.2.1"
+  }
+}
